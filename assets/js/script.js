@@ -20,7 +20,7 @@ function SliderCarousel(slider,btns,slides,dots) {
 
 // To transition the slides
 	function slide() {
-		slider.style.transition = "transform .4s ease";
+		slider.classList.add('transition');
 		update();
 	}
 
