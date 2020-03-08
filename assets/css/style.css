@@ -202,6 +202,8 @@ header .wrapper {
   transition: background-color 0.3s ease;
 }
 
+.transition-active { transition: transform 0.4s ease-in-out; }
+.transition-inactive { transition: all 0s; }
 .dot-active { background: #fff;}
 .dot:hover {background-color: rgba(0,0,0,0.3);}
 
