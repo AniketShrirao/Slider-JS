@@ -20,7 +20,8 @@ function SliderCarousel(slider,btns,slides,dots) {
 
 // To transition the slides
 	function slide() {
-		slider.classList.add('transition');
+		slider.classList.remove('transition-inactive');		
+		slider.classList.add('transition-active');
 		update();
 	}
 
@@ -75,12 +76,14 @@ function SliderCarousel(slider,btns,slides,dots) {
 	// cloning of first and last slide to give slider effect at the end of every transition
 	slider.addEventListener('transitionend', function() {
 		if(slides[index].parentNode.id === "first") {
-			slider.style.transition = "none";
+			slider.classList.add('transition-inactive');		
+			slider.classList.remove('transition-active');
 			index = slides.length - 2;
 			slider.style.transform = "translateX("+ (-size * index) +"px)";
 		}
 		else if(slides[index].parentNode.id === "last") {
-			slider.style.transition = "none";
+			slider.classList.add('transition-inactive');		
+			slider.classList.remove('transition-active');
 			index = 1;
 			slider.style.transform = "translateX("+ (-size * index) +"px)";
 		}
