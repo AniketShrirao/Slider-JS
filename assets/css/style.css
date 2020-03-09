@@ -127,7 +127,7 @@ header .wrapper {
 =================================*/
 
 .section-slider { 
-  padding: 20px; 
+  padding: 20px 0; 
   position: relative;
   overflow:hidden;
 }
